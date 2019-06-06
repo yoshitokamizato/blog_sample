@@ -1,19 +1,19 @@
-class BlogsController < ApplicationController
+class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index]  # deviseのメソッドで「ログインしていないユーザーをログイン画面に送る」メソッド
 
   def index
-    @blogs = Blog.all
+    @articles = Article.all
   end
 
   def new
-    @blog = Blog.new # 新規投稿用の空のインスタンス
+    @article = Article.new # 新規投稿用の空のインスタンス
   end
 
   def create
   end
 
   def show
-    @blog = Blog.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
 end

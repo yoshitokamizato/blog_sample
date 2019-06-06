@@ -1,0 +1,4 @@
+<% @articles.each do |article| %>
+  <hr>
+  <p><span>ツイート内容: </span><%=link_to article.body, article_path(article.id) %></p>
+<% end %>
